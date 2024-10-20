@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  header{
+    padding:6px;
+    background-color:rgb(255, 255, 255);
+  
+  }
+  /* Estilo para o container da imagem de fundo */
+  .background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Faz com que ocupe a altura total da janela */
+    background-image: url(/imagens/notebook-1840276_1280.jpg);
+    background-size: cover; /* Faz com que a imagem cubra todo o fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+  
+  }
+  
+  /* Estilo para a sobreposição preta */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3; /* Define a opacidade em 30% */
+    z-index: 1; /* Coloca a sobreposição acima da imagem */
+  }
+
+
+/* Estilo para a barra de navegação */
+.navbar {
+    position: relative;
+    z-index: 2; /* Colocar o z-index maior que o da overlay */
+}
+
+.btn btn-primary

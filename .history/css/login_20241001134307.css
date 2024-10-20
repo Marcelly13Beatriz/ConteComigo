@@ -1,0 +1,143 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  top: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header{
+  padding:6px;
+  background-color:rgb(255, 255, 255);
+
+}
+/* Estilo para o container da imagem de fundo */
+.background {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Faz com que ocupe a altura total da janela */
+  background-image: url(/imagens/notebook-1840276_1280.jpg);
+  background-size: cover; /* Faz com que a imagem cubra todo o fundo */
+  background-position: center; /* Centraliza a imagem de fundo */
+
+}
+
+/* Estilo para a sobreposição preta */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3; /* Define a opacidade em 30% */
+  z-index: 1; /* Coloca a sobreposição acima da imagem */
+}
+
+/* Conteúdo do site */
+.content {
+
+  width: 100%;
+  min-width: 600px;
+  position: relative;
+  z-index: 2; /* Coloca o conteúdo acima da sobreposição */
+  color: white; /* Torna o texto branco para contraste */
+  text-align: center;
+  padding-top: 20vh; /* Ajusta a posição do conteúdo */
+  display: flex;
+  justify-content: center;
+}
+
+
+
+  img{
+      width: 400px;
+      height: auto;
+      margin-bottom: 10px;
+  }
+  ul{
+      list-style-type: none;
+  }
+
+  .form-group{
+      padding: 15px;
+      
+  }
+  
+
+h1{
+  color:black;
+}
+
+form {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: 30%;
+  height: auto;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+  
+}
+
+.form{
+  padding: 18px;
+}
+
+.form-content{
+  margin-bottom: 8px;
+  padding-bottom: 18px;
+  position: relative;
+}
+
+.form-content label{
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.form-content input{
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  padding: 8px;
+  border: 2px solid #dfdfdf;
+}
+
+.form-content a{
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  visibility: hidden;
+}
+
+button {
+  background-color: #00014d;
+  color: #FFF;
+  width: 100%;
+  border-radius: 14px;
+  padding: 10px;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Mudanças ao passar o mouse */
+button:hover {
+  background-color: #1a1a80; /* Mudança no background */
+  transform: scale(1.05); /* Efeito de zoom */
+}
+
+
+.form-content.error input{
+  border-color: #ff3b25;
+}
+
+.form-content.error a{
+  color: #ff3b25;
+  visibility: visible;
+}
