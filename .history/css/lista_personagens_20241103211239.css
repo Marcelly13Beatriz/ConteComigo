@@ -1,0 +1,80 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+#titulo{
+    font-size: 20px;
+    padding: 5px;
+    color: #f4f4f4;
+    background-color:#080846 ;
+}
+
+
+#mais{
+background-color: #080846;
+color: #f4f4f4;
+
+}
+
+#criar{
+background-color: #f4f4f4;
+color: #080846;
+}
+
+
+/* Estilos para todos os botões */
+.btn-primary {
+    top: 50px;
+    left: 30px;
+    border:none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra padrão */
+    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+#titulo {
+    font-weight: 600;
+    margin: 20px 0;
+}
+.btn-toolbar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.character-card {
+    width: 100%;
+    max-width: 250px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 10px;
+    gap: 15px;
+}
+.character-card img {
+    width: 60px;
+    height: 60px;
+    background-color: #f8e6e6;
+    border-radius: 5px;
+}
+.character-info {
+    flex: 1;
+}
+.character-info h5 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.character-info p {
+    font-size: 14px;
+    color: #555;
+}

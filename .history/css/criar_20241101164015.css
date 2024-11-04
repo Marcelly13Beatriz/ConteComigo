@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    font-family: "Poppins", sans-serif;
+    background-color:#ddd ;
+  }
+
+  #cabeçalho{
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    color: #00014d;
+    text-align: center;
+
+  }

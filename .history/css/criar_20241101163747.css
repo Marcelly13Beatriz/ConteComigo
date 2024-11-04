@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+  #cabeçalho{
+    font-size: 50px;
+    font-weight: bold;
+    background-color: #00014d;
+    color: #f4f4f4;
+    
+
+  }

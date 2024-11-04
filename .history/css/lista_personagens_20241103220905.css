@@ -1,0 +1,50 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+#titulo{
+    font-size: 20px;
+    padding: 5px;
+    color: #f4f4f4;
+    background-color:#080846 ;
+}
+
+
+#mais{
+background-color: #080846;
+color: #f4f4f4;
+
+}
+
+#criar{
+background-color: #f4f4f4;
+color: #080846;
+}
+
+
+/* Estilos para todos os botões */
+.btn-primary {
+    top: 50px;
+    left: 30px;
+    border:none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra padrão */
+    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.card{
+    top:100px;
+    left: 30px;
+}
+
+.bi-person-circle{
+    color: #080846;
+}
+a:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+
+}
