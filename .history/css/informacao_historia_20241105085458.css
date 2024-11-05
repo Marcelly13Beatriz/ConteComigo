@@ -21,12 +21,7 @@
 
 h1 {
     text-align: center;
-
-}
-
-.historia__titulo{
-    padding: 5px;
-    font-size: 25px;
+    padding: 10px;
 }
 form {
     background-color: transparent;

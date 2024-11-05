@@ -24,10 +24,7 @@ h1 {
 
 }
 
-.historia__titulo{
-    padding: 5px;
-    font-size: 25px;
-}
+.historia__titulo
 form {
     background-color: transparent;
     padding: 20px;
