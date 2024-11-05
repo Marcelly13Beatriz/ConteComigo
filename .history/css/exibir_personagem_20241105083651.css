@@ -72,3 +72,8 @@ button {
     transform: none;
 }
 
+a{
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; 
+}
+
