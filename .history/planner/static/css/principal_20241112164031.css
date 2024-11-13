@@ -15,7 +15,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh; 
-    background-image: url('imagens\notebook-1840276_1280.png');
+    background-image: url(% static 'imagens\notebook-1840276_1280.png' %);
     background-size: cover; 
     background-position: center; /* Centraliza a imagem de fundo */
   
