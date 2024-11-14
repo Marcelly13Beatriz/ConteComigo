@@ -1,6 +1,7 @@
 from django.contrib import messages
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
+from .forms import PersonagemForm
 from .models import Usuario, Personagem
 
 
@@ -53,10 +54,10 @@ def criar_personagem(request):
         personagem = Personagem(
             pers_nome=name,
             pers_idade=age,
-            pers_personalidade=gender,
-            pers_aparencia=backstory,  # Adjust field as needed
-            pers_sonhos=goals,
-            pers_defeitos=traits
+            pers_genero=gender,
+            pers_historia=backstory,  # Adjust field as needed
+            pers_objetivo=goals,
+            pers_caracteristica=traits
         )
 
         personagem.save()  # Save to the database
@@ -73,8 +74,12 @@ def exibir_historia(request):
     return render(request, 'planner/exibir_historia.html')
 
 
-def exibir_personagem(request):
-    return render(request, 'planner/exibir_personagem.html')
+# def exibir_personagem(request):
+#     return render(request, 'planner/exibir_personagem.html')
+
+def exibir_personagem(request, id):
+    personagem = get_object_or_404(Personagem, id=id)  # Obtém o personagem pelo ID
+    return render(request, 'planner/exibir_personagem.html', {'personagem': personagem})
 
 
 def planner(request):
@@ -114,3 +119,23 @@ def login(request):
             messages.error(request, 'E-mail não encontrado.')
 
     return render(request, 'planner/login.html')
+
+
+def excluir_personagem(request, id):
+    personagem = get_object_or_404(Personagem, id=id)
+    personagem.delete()
+    return redirect('lista_personagens')
+
+
+def editar_personagem(request, id):
+    personagem = get_object_or_404(Personagem, id=id)
+
+    if request.method == "POST":
+        form = PersonagemForm(request.POST, instance=personagem)
+        if form.is_valid():
+            form.save()
+            return redirect('exibir_personagem', id=personagem.id)  # Redireciona para a página de detalhes
+    else:
+        form = PersonagemForm(instance=personagem)
+
+    return render(request, 'planner/editar_personagem.html', {'form': form, 'personagem': personagem})
