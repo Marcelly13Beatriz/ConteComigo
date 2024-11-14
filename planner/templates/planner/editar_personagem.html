@@ -29,8 +29,8 @@
                     <i class="bi bi-person-circle fs-2"></i> <!-- Ícone de usuário -->
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                    <li><a class="dropdown-item" href="#">Perfil</a></li>
-                    <li><a class="dropdown-item" href="#">Configurações</a></li>
+                    <li><a class="dropdown-item" href="{% url 'exibir_perfil' %}">Perfil</a></li>
+                    <li><a class="dropdown-item" href="{% url 'configuracao_conta' %}">Configurações</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Sair</a></li>
                 </ul>

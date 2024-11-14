@@ -16,5 +16,6 @@ urlpatterns = [
     path('exibir_personagem/<int:id>/', views.exibir_personagem, name='exibir_personagem'),
     path('excluir_personagem/<int:id>/', views.excluir_personagem, name='excluir_personagem'),
     path('editar_personagem/<int:id>/', views.editar_personagem, name='editar_personagem'),
-
+    path('exibir_perfil', views.exibir_perfil, name='exibir_perfil'),
+    # path('exibir_perfil/<int:id>/', views.exibir_perfil, name='exibir_perfil'),
 ]

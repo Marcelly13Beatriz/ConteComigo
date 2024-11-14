@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 
 from .forms import PersonagemForm
 from .models import Usuario, Personagem
@@ -81,6 +82,22 @@ def exibir_personagem(request, id):
     personagem = get_object_or_404(Personagem, id=id)  # Obtém o personagem pelo ID
     return render(request, 'planner/exibir_personagem.html', {'personagem': personagem})
 
+# def exibir_perfil(request, id):
+#     usuario = get_object_or_404(Usuario, id=id)  # Obtém o personagem pelo ID
+#     return render(request, 'planner/exibir_perfil.html', {'usuario': usuario})
+
+def exibir_perfil(request):
+    # return render(request, 'planner/exibir_conta.html')
+    return render(request, 'planner/exibir_conta.html', {'usuario': request.user})
+
+# @login_required
+# def exibir_perfil(request):
+#     # Verificando se o usuário está autenticado
+#     if request.user.is_authenticated:
+#         usuario = request.user  # Aqui deve ser uma instância de Usuario
+#         return render(request, 'planner/exibir_conta.html', {'usuario': usuario})
+#     else:
+#         return redirect('login')  # Redireciona para a página de login
 
 def planner(request):
     return render(request, "planner/index.html")
