@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    font-family: "Poppins", sans-serif;
+    background-color:#ddd ;
+  }
+
+  #cabeçalho{
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #fff;
+    color: #00014d;
+    text-align: center;
+
+  }
+
+ h1 {
+    text-align: center;
+}
+form {
+    background-color: transparent;
+    padding: 20px;
+
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+input[type="text"], textarea {
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+input[type="file"] {
+    margin-bottom: 15px;
+}
+button {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #0A0A5E; 
+    border-color: #0A0A5E;
+    width: 120px;
+    border-radius: 4px; 
+}
+.btn-primary:hover {
+    background-color: #080846; 
+    border-color: #080846;
+   
+}
+
+.px-110 {
+    padding-left: 110px;
+    padding-right: 110px;
+}
+.text-center{
+    background-color: transparent;
+}
+
+.story-card { /* Configurações dos cards, ajuste de tamanhos e mais*/
+    height: 200px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 10px;  
+    flex-direction: column; 
+    overflow: hidden; 
+    
+}
+.story-card:hover {
+    background-color: #f9f9f9;
+}
+.display-1{
+    background-color: transparent;
+}
+
+.custom-size {
+    width: 180px;  
+    height: 250px; 
+}
+
+#imagePreview { /*Configurações na visualização da imagem*/
+    max-width: 100%; 
+    max-height: 300px; 
+    width: auto; 
+    height: auto; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}

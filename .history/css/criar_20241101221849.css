@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    font-family: "Poppins", sans-serif;
+    background-color:#ddd ;
+  }
+
+  #cabeçalho{
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #fff;
+    color: #00014d;
+    text-align: center;
+
+  }
+
+  h1 {
+    text-align: center;
+}
+form {
+    background-color: transparent;
+    padding: 20px;
+
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+input[type="text"], textarea {
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+input[type="file"] {
+    margin-bottom: 15px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+label[for=idea], [for=title], [for=summary], [for=synopsis], [for=setting]
+{
+    text-align: center;
+    background-color: transparent;
+}
+
+.btn-primary {
+    background-color: #0A0A5E; /* Azul escuro */
+    border-color: #0A0A5E;
+    width: 120px;
+    border-radius: 4px; 
+}
+.btn-primary:hover {
+    background-color: #080846; /* Azul escuro um pouco mais escuro ao passar o mouse */
+    border-color: #080846;
+   
+}
+
+.px-110 {
+    padding-left: 110px;
+    padding-right: 110px;
+}
+.text-center{
+    background-color: transparent;
+}
+
+.story-card {
+    height: 200px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.story-card:hover {
+    background-color: #f9f9f9;
+}
+.display-1{
+    background-color: transparent;
+}
+
+.custom-size {
+    width: 200px;  
+    height: 250px; 
+}
+

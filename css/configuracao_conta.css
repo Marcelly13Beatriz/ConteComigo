@@ -1,0 +1,81 @@
+.configuracao {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.configuracao__geral {
+    display:flex;
+    justify-content: space-around;
+    padding-top: 64px;
+    height: 596px;
+}
+
+.configuracao__titulo {
+    color: var(--cinza-escuro);
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: var(--montserrat);
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-bottom: 1.25rem;
+}
+
+.configuracao__descricao {
+    margin-top: 8px;
+    margin-bottom: 32px;
+    height: 128px;
+}
+
+.configuracao__mensagem {
+    height: 133px;
+    resize: none;
+}
+
+.configuracao__input {
+    margin-bottom: 32px;
+    width: 656px;
+    height: 53px;
+    padding-left: 8px;
+
+}
+
+.configuracao__input {
+    border: none;
+    border-radius: 5px;
+    border-bottom: 2px solid #C8C8C8;
+    
+}
+
+.configuracao__input:focus {
+    outline: none;
+    border-color: #2A7AE4;
+}
+
+.configuracao__input:valid {
+    border-color: #1a9b06;
+}
+
+.configuracao__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.configuracao__botao {
+    /* position: absolute;
+    bottom: 0; */
+    width: 165px;
+    height: 50px;
+    border: 0;
+}
+
+.configuracao__linha {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 20px 0;
+}
+
+.botao__salvar {
+    color: #FFFF;
+    padding: 5px;
+}

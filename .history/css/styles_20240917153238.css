@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    font-family: sans-serif;
+}
+
+.header{
+    height: 15vh;
+}
+.img{
+    background-position: center;
+    height: 70vh;
+    background-image: url(/imagens/notebook-1840276_1280.jpg);
+    background-repeat: no-repeat;
+}
+
+.color{
+    background-color:black;
+}
