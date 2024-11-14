@@ -33,11 +33,11 @@ class Cenario(models.Model):
 
 class Personagem(models.Model):
     pers_nome = models.CharField(max_length=96)
-    pers_personalidade = models.CharField(max_length=64, null=True)
+    pers_genero = models.CharField(max_length=64, null=True)
     pers_idade = models.SmallIntegerField(null=True)
-    pers_aparencia = models.CharField(max_length=255, null=True)
-    pers_sonhos = models.CharField(max_length=255, null=True)
-    pers_defeitos = models.CharField(max_length=255, null=True)
+    pers_objetivo = models.CharField(max_length=255, null=True)
+    pers_historia = models.CharField(max_length=255, null=True)
+    pers_caracteristica = models.CharField(max_length=255, null=True)
     pers_his_fk = models.ForeignKey(Historia, null=True, on_delete=models.CASCADE)
 
     class Meta:

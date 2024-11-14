@@ -12,5 +12,10 @@ urlpatterns = [
     path('exibir_historia/', views.exibir_historia, name='exibir_historia'),
     path('criar_personagem/', views.criar_personagem, name='criar_personagem'),
     path('infomacao_historia', views.infomacao_historia, name='informacao_historia'),
-    path('exibir_personagem/', views.exibir_personagem, name='exibir_personagem'),
+    # path('exibir_personagem/', views.exibir_personagem, name='exibir_personagem'),
+    path('exibir_personagem/<int:id>/', views.exibir_personagem, name='exibir_personagem'),
+    path('excluir_personagem/<int:id>/', views.excluir_personagem, name='excluir_personagem'),
+    path('editar_personagem/<int:id>/', views.editar_personagem, name='editar_personagem'),
+    path('exibir_perfil', views.exibir_perfil, name='exibir_perfil'),
+    # path('exibir_perfil/<int:id>/', views.exibir_perfil, name='exibir_perfil'),
 ]

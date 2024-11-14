@@ -29,8 +29,8 @@
                     <i class="bi bi-person-circle fs-2"></i> <!-- Ícone de usuário -->
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                    <li><a class="dropdown-item" href="#">Perfil</a></li>
-                    <li><a class="dropdown-item" href="#">Configurações</a></li>
+                    <li><a class="dropdown-item" href="{% url 'exibir_perfil' %}">Perfil</a></li>
+                    <li><a class="dropdown-item" href="{% url 'configuracao_conta' %}">Configurações</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Sair</a></li>
                 </ul>
@@ -42,7 +42,7 @@
     <div class="px-110">
         <div class="container-fluid" id="main-content">
             <div>
-                <h1 id="nome_personagem">Nome do Personagem</h1>
+                <h1 id="nome_personagem">{{ personagem.pers_nome }}</h1>
             </div>
             <div class="image-preview mt-3 mb-4">
                 <img src="{% static 'imagens/exemplo_personagem.jpeg' %}" alt="Pré-visualização da imagem" style="max-width: 100%; max-height: 100%;">
@@ -52,7 +52,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4>Idade</h4>
-                            <p id="characterAge">25</p>
+                            <p id="characterAge">{{ personagem.pers_idade }}</p>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4>Gênero</h4>
-                            <p id="characterGender">feminino</p>
+                            <p id="characterGender">{{ personagem.pers_genero }}</p>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4>História de Fundo</h4>
-                            <p id="characterBackstory">Esta é a história de fundo do personagem...</p>
+                            <p id="characterBackstory">{{ personagem.pers_historia }}</p>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4>Características</h4>
-                            <p id="characterTraits">Corajoso, Inteligente, Amigável</p>
+                            <p id="characterTraits">{{ personagem.pers_caracteristica }}</p>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4>Objetivos</h4>
-                            <p id="characterGoals">Proteger sua cidade, Tornar-se um grande herói</p>
+                            <p id="characterGoals">{{ personagem.pers_objetivo }}</p>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,10 @@
     </div>
 
     <div class="text-center">
-        <a href="{% url 'criar_personagem' %}"><button type="button" class="btn btn-primary new-story-button mt-2 size">Editar</button></a>
+        <a href="{% url 'editar_personagem' personagem.id %}"><button type="button" class="btn btn-primary new-story-button mt-2 size">Editar</button></a>
+    
+        <a href="{% url 'excluir_personagem' personagem.id %}"><button type="button" class="btn btn-danger new-story-button mt-2 size">Excluir</button></a>
+        
     </div>
 
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>

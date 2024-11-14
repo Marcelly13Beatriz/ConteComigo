@@ -4,7 +4,7 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuração da Conta</title>
+    <title>Perfil da Conta</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,15 +46,28 @@
             <div class="container">
                 <section class="configuracao__geral">
                     <div class="configuracao__conteudo">
-                        <h2 class="configuracao__titulo">Configuração de conta</h2>
+                        <h2 class="configuracao__titulo">Perfil de conta</h2>
                         <hr class="configuracao__linha">
                         <form class="configuracao__form" autocomplete="off">
-                            <input maxlength="50" type="text" class="configuracao__input configuracao__nome" required placeholder="Nome">
-                            <input maxlength="50" type="email" class="configuracao__input configuracao__email" required placeholder="seuemail@dominio.com">
-                            <input maxlength="50" type="text" class="configuracao__input configuracao__senha" required placeholder="senha">
-
-                            <div class="text-center">
-                                <button type="submit" class="btn-primary new-character-button mt-2 size botao__salvar">Salvar</button>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <p id="nome" class="form-control-plaintext configuracao__input configuracao__nome">{{ usuario.user_nome }}</p>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>Idade</h4>
+                                        <p id="characterAge">Idade não disponível</p> <!-- Você pode calcular a idade ou mostrar uma informação extra se necessário -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <p id="email" class="form-control-plaintext">{{ usuario.user_email }}</p>
+                            </div>
+                            <div class="mb-3">
+                                <label for="senha" class="form-label">Senha</label>
+                                <p id="senha" class="form-control-plaintext">******</p> <!-- Senha não será exibida por questões de segurança -->
                             </div>
                         </form>
                     </div>
@@ -66,5 +79,4 @@
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
     <script src="{% static 'js/script_usuario.js' %}"></script>
-</body>
 </html>
